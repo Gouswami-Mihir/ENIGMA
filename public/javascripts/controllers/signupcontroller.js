@@ -1,7 +1,8 @@
 app.controller("SignupController", ($scope, $http) => {
     $scope.onSignup = function () {
-      if($scope.form && Object.keys($scope.form).length > 0){  
+      if( Object.keys($scope.form).length > 0){  
         if ($scope.form.password == $scope.form.Cpassword) {
+            if($scope.form.password.length >= 5){
               if($scope.form.firstname){  
                 if($scope.form.lastname){
                 if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($scope.form.email) && $scope.form.password && $scope.form.password.trim() != '') {
@@ -38,7 +39,10 @@ app.controller("SignupController", ($scope, $http) => {
             }else{
                 swal("Oops","please enter firstname to create user","error");
             }   
-
+        }else{
+            swal("Oops", "minimum 5 characters contains in your password please try again", "error")
+            
+        }
             
         } else {
             swal("Oops", "Both password and confirm password must be identical", "error")

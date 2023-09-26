@@ -1,7 +1,7 @@
 app.controller("LoginController",($scope, $http)=>{
     
     $scope.onLogin = function(){
-        if($scope.form && Object.keys($scope.form).length > 0){
+        if(Object.keys($scope.form).length > 0){
              if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test($scope.form.email) && $scope.form.password && $scope.form.password.trim() != ''){
         $http({
             url : BASE_URL,
