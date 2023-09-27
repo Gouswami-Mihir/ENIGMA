@@ -2,7 +2,7 @@ const dotenv = require('dotenv').config();
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
-// var expressLayouts = require("express-ejs-layouts");
+var expressLayouts = require("express-ejs-layouts");
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
@@ -10,7 +10,8 @@ var mongoose = require('mongoose');
 const adminpaths =[
   { pathUrl: '/', routesFile: 'login'},
   { pathUrl: '/signup', routesFile: 'signup'},
-  { pathUrl: '/dashborad', routesFile: 'dashborad'}
+  { pathUrl: '/dashborad', routesFile: 'dashborad'},
+  { pathUrl: '/users', routesFile: 'users'}
 ];
 var session = require("express-session");
 var app = express();
@@ -27,8 +28,8 @@ app.use(
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-// app.use(expressLayouts);
-// app.set('layout','layouts/layout');
+app.use(expressLayouts);
+app.set('layout','layouts/layout');
 mongoose.set('runValidators', true);
 mongoose.set('strictQuery', false);
 mongoose.connect(process.env.MONGO_URI, {

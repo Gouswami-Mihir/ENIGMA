@@ -4,7 +4,7 @@ const responseManager = require('../utilities/responseManager');
 const helper = require('../utilities/helper');
 var userModel = require('../models/users.model');
 exports.loginview = function(req, res, next) {
-    res.render('login', { title: 'Express' }); 
+    res.render('login', { title: 'Express', layout:false}); 
 }
 exports.loginpost = async (req, res) => {
     if (Object.keys(req.body).length > 0) {
