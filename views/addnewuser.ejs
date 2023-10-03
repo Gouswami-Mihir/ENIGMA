@@ -1,0 +1,66 @@
+     <!-- BEGIN: Content -->
+     <div class="content content--top-nav">
+        <div class="intro-y flex items-center mt-8">
+            <h2 class="text-lg font-medium mr-auto">
+                Regular Form
+            </h2>
+        </div>
+        <div class="grid grid-cols-12 gap-6 mt-5">
+            <div class="intro-y col-span-12 lg:col-span-6">
+                <!-- BEGIN: Input -->
+                <div class="intro-y box" ng-controller="AdduserController">
+                    <div class="flex flex-col sm:flex-row items-center p-5 border-b border-slate-200/60 dark:border-darkmode-400">
+                        <h2 class="font-medium text-base mr-auto">
+                            Input
+                        </h2>
+                        <div class="form-check form-switch w-full sm:w-auto sm:ml-auto mt-3 sm:mt-0">
+                            <label class="form-check-label ml-0" for="show-example-1">Show example code</label>
+                            <input id="show-example-1" data-target="#input" class="show-code form-check-input mr-0 ml-3" type="checkbox">
+                        </div>
+                    </div>
+                    <div id="input" class="p-5">
+                        <form methode="POST" ng-submit="onAdduser()">
+                        <div class="preview">
+                            <div>
+                                <label for="regular-form-1" class="form-label">Full Name</label>
+                                <input id="regular-form-1" type="text"    ng-model="form.fullname"  class="form-control" placeholder="enter name">
+                            </div>
+                            <div class="mt-3">
+                                <label for="regular-form-2" class="form-label">Email</label>
+                                <input id="regular-form-2" type="text"   ng-model="form.email"        class="form-control form-control-rounded" placeholder="xyz@example.com">
+                            </div>
+                            <div class="mt-3">
+                                <label for="regular-form-3" class="form-label">Mobile no.</label>
+                                <input id="regular-form-3" type="text"  ng-model="form.mobile" class="form-control form-control-rounded" placeholder="enter mobile number">
+                            </div>
+                            
+                            <div class="mt-3">
+                                <label for="regular-form-4" class="form-label">Password</label>
+                                <input id="regular-form-4"   ng-model="form.password"    type="password" class="form-control" placeholder="Password">
+                            </div>
+                            <div class="mt-3">
+                                <label for="regular-form-5" class="form-label">dob</label>
+                                <input id="regular-form-5" type="date"   ng-model="form.dob" class="form-control"  >
+                            </div>
+                            <div class="mt-3">
+                                <label for="regular-form-6" class="form-label">gender:</label>
+                                
+                                <input type="radio" id="html"   ng-model="form.gender"    name="fav_language" value="male">
+                                <label for="html">male</label>
+                                <input type="radio" id="html1"   ng-model="form.gender"     name="fav_language" value="female">
+                                <label for="html1">female</label><br>
+                            </div>
+                            
+                            <button type="submit"
+                                class="btn btn-primary py-3 px-4 w-full xl:w-32 xl:mr-3 align-top">Create User</button>
+                        </div>
+                        </form>
+                        <div class="source-code hidden">
+                            <button data-target="#copy-input" class="copy-code btn py-1 px-2 btn-outline-secondary"> <i data-lucide="file" class="w-4 h-4 mr-2"></i> Copy example code </button>
+                            <div class="overflow-y-auto mt-3 rounded-md">
+                                <pre id="copy-input" class="source-preview"> <code class="html"> HTMLOpenTagdivHTMLCloseTag HTMLOpenTaglabel for=&quot;regular-form-1&quot; class=&quot;form-label&quot;HTMLCloseTagInput TextHTMLOpenTag/labelHTMLCloseTag HTMLOpenTaginput id=&quot;regular-form-1&quot; type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Input text&quot;HTMLCloseTag HTMLOpenTag/divHTMLCloseTag HTMLOpenTagdiv class=&quot;mt-3&quot;HTMLCloseTag HTMLOpenTaglabel for=&quot;regular-form-2&quot; class=&quot;form-label&quot;HTMLCloseTagRoundedHTMLOpenTag/labelHTMLCloseTag HTMLOpenTaginput id=&quot;regular-form-2&quot; type=&quot;text&quot; class=&quot;form-control form-control-rounded&quot; placeholder=&quot;Rounded&quot;HTMLCloseTag HTMLOpenTag/divHTMLCloseTag HTMLOpenTagdiv class=&quot;mt-3&quot;HTMLCloseTag HTMLOpenTaglabel for=&quot;regular-form-3&quot; class=&quot;form-label&quot;HTMLCloseTagWith HelpHTMLOpenTag/labelHTMLCloseTag HTMLOpenTaginput id=&quot;regular-form-3&quot; type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;With help&quot;HTMLCloseTag HTMLOpenTagdiv class=&quot;form-help&quot;HTMLCloseTagLorem Ipsum is simply dummy text of the printing and typesetting industry.HTMLOpenTag/divHTMLCloseTag HTMLOpenTag/divHTMLCloseTag HTMLOpenTagdiv class=&quot;mt-3&quot;HTMLCloseTag HTMLOpenTaglabel for=&quot;regular-form-4&quot; class=&quot;form-label&quot;HTMLCloseTagPasswordHTMLOpenTag/labelHTMLCloseTag HTMLOpenTaginput id=&quot;regular-form-4&quot; type=&quot;password&quot; class=&quot;form-control&quot; placeholder=&quot;Password&quot;HTMLCloseTag HTMLOpenTag/divHTMLCloseTag HTMLOpenTagdiv class=&quot;mt-3&quot;HTMLCloseTag HTMLOpenTaglabel for=&quot;regular-form-5&quot; class=&quot;form-label&quot;HTMLCloseTagDisabledHTMLOpenTag/labelHTMLCloseTag HTMLOpenTaginput id=&quot;regular-form-5&quot; type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Disabled&quot; disabledHTMLCloseTag HTMLOpenTag/divHTMLCloseTag </code> </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END: Input -->

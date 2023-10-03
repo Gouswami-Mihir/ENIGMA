@@ -11,7 +11,8 @@ const adminpaths =[
   { pathUrl: '/', routesFile: 'login'},
   { pathUrl: '/signup', routesFile: 'signup'},
   { pathUrl: '/dashborad', routesFile: 'dashborad'},
-  { pathUrl: '/users', routesFile: 'users'}
+  { pathUrl: '/users', routesFile: 'users'},
+  { pathUrl: '/addnewuser', routesFile: 'addnewuser'}
 ];
 var session = require("express-session");
 var app = express();

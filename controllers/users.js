@@ -12,7 +12,8 @@ exports.usersview =  async (req, res)=> {
       let userdata = await primary.model(constants.MODELS.users, userModel).findById(req.session.userid).lean();
       console.log('userdata', userdata);
       if(userdata){
-        res.render('users', {title: 'users'});
+        let data = await primary.model(constants.MODELS.users, userModel).find({createby : req.session.userid}).lean();
+        res.render('users', {title: 'users',pop:data});
       }else{
         res.redirect("/");
       }
