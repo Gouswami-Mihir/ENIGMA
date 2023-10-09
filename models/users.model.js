@@ -16,12 +16,7 @@ let schema = new mongoose.Schema({
     password : {
         type : String,
         require : true
-    },
-    
-    // Cpassword : {
-    //     type : String,
-    //     require : true
-    // },
+    }
 }, {timestamp : true, strict : false, autoIndex : true});
 schema.plugin(mongoosePaginate);
 module.exports = schema;
