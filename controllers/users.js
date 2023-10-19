@@ -22,4 +22,18 @@ exports.usersview =  async (req, res)=> {
     }
     
   };
+  exports.userspost = async (req, res) => {
+    // let {search, LImit } = req.body;
+    //   let bob = parseInt(LImit);
+    //   let primary = mongoConnection.useDb(constants.DEFAULT_DB);
+    //   let data = await primary.model(constants.MODELS.users, userModel).aggregate([
+    //     { $match : { $or:[
+    //       {fullname:{$regex: search, $options:"i"}},
+    //       {email:{$regex: search,$options: "i"}},
+    //     ]  } },
+    //     {$limit:bob},
+    //     {$project:{_id:0, email:1,fullname:1, mobile:1}}
+    //   ])
+    //   res.send(data);
+  }
   
